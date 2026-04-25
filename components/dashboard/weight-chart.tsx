@@ -27,16 +27,16 @@ export function WeightChart({ data }: { data: WeightLog[] }) {
     <div className="h-[300px] w-full">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={chartData} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#333333" />
           <XAxis
             dataKey="date"
-            stroke="hsl(var(--muted-foreground))"
+            stroke="#888888"
             fontSize={12}
             tickLine={false}
             axisLine={false}
           />
           <YAxis
-            stroke="hsl(var(--muted-foreground))"
+            stroke="#888888"
             fontSize={12}
             tickLine={false}
             axisLine={false}
@@ -45,19 +45,21 @@ export function WeightChart({ data }: { data: WeightLog[] }) {
           />
           <Tooltip
             contentStyle={{
-              backgroundColor: "hsl(var(--card))",
-              border: "1px solid hsl(var(--border))",
+              backgroundColor: "#1a1a1a",
+              border: "1px solid #333333",
               borderRadius: "8px",
+              color: "#ffffff",
             }}
-            labelStyle={{ color: "hsl(var(--foreground))" }}
+            labelStyle={{ color: "#ffffff" }}
+            formatter={(value) => [`${value} kg`, "Weight"]}
           />
           <Line
             type="monotone"
             dataKey="weight"
-            stroke="hsl(var(--primary))"
+            stroke="#FF0000"
             strokeWidth={2}
-            dot={{ fill: "hsl(var(--primary))", strokeWidth: 2 }}
-            activeDot={{ r: 6, fill: "hsl(var(--primary))" }}
+            dot={{ fill: "#FF0000", strokeWidth: 2, r: 4 }}
+            activeDot={{ r: 6, fill: "#FF0000" }}
           />
         </LineChart>
       </ResponsiveContainer>
