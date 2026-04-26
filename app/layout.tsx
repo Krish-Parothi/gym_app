@@ -5,7 +5,7 @@ import './globals.css'
 import  TargetCursor  from '@/components/mouse/TargetCursor'
 import ClickSpark from '@/components/mouse/Click'
 import FloatingChatAssistant from '@/components/ui/FloatChat'
-
+import { Analytics } from '@vercel/analytics/react'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
