@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/lib/auth';
 import { useRouter } from 'next/navigation';
-import AdminSidebar from '@/components/AdminSidebar';
+import {AdminSidebar} from './sidebar';
 import StatsCard from '@/components/StatsCard';
 import { supabase } from '@/lib/supabase';
 import { Users, DollarSign, TrendingUp, Calendar } from 'lucide-react';
